@@ -10,5 +10,3 @@ $php artisan db:install
 $php artisan data:generate
 
 ```
-
-#kim
