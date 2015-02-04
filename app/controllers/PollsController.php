@@ -31,7 +31,7 @@ class PollsController extends BaseController
 	public function showResults($id)
 	{	
 		$data['poll'] = Poll::find((int) $id);
-
-		return View::make('results',$data);	
+        $users = User::all();
+		return View::make('results',$data)->with(compact('users'));
 	}
 }

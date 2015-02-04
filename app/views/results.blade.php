@@ -28,7 +28,7 @@
 
             <div class="widget-header">
 
-                <h4> {{{$poll->question}}}</h4>
+                <h4> Results </h4>
 
             </div>
 
@@ -40,7 +40,32 @@
                     @endforeach
 
                     <hr>
-
+                <table class="table table-striped table-bordered table-hover table-tabletools table-responsive datatable">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Birthdate</th>
+                        <th>Browser</th>
+                        <th>Reason</th>
+                        <th>Time Submitted</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($users as $user)
+                    <tr>
+                        <td>
+                            <a href="#">{{$user->name}}</a>
+                        </td>
+                        <td>{{ $user->email }}</td>
+                        <td>{{ $user->birthday }}</td>
+                        <td>{{  \Answer::find($user->answer_id)->answer}}</td>
+                        <td>{{ $user->reasons }}</td>
+                        <td>{{ $user->created_at }}</td>
+                    </tr>
+                    @endforeach
+                    </tbody>
+                </table>
                     {{ link_to_route('polls', Lang::get('poll.to_poll')) }}
                 @stop
 
