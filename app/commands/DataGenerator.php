@@ -41,12 +41,6 @@ class DataGenerator extends Command {
 		$poll->question = $this->_generateQuestion();
 
 		$answers = array();
-//		for ($i = 7;$i;$i--) {
-//			$data = new Answer();
-//			$data->answer = $this->_generateAnswer();
-//			$data->votes = 0;
-//			$answers[] = $data;
-//		}
 
         foreach($this->words as $word)
         {

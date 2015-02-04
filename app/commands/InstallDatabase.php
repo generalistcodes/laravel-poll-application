@@ -55,6 +55,7 @@ class InstallDatabase extends Command {
 		    $table->string('answer');
 		    $table->string('name');
 		    $table->string('email');
+		    $table->string('reasons');
             $table->dateTime("birthday");
 		    $table->integer('votes');
 
