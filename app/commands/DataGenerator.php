@@ -41,18 +41,20 @@ class DataGenerator extends Command {
 		$poll->question = $this->_generateQuestion();
 
 		$answers = array();
-		for ($i = 7;$i;$i--) {
-			$data = new Answer();
-			$data->answer = $this->_generateAnswer();
-			$data->votes = 0;
-			$answers[] = $data;
-		}
+//		for ($i = 7;$i;$i--) {
+//			$data = new Answer();
+//			$data->answer = $this->_generateAnswer();
+//			$data->votes = 0;
+//			$answers[] = $data;
+//		}
 
-        $data = new Answer();
-
-        $data->answer = 'kkkk';
-
-        $data->save();
+        foreach($this->words as $word)
+        {
+            $data = new Answer();
+            $data->answer = $word;
+            $data->votes = 0;
+            $answers[] = $data;
+        }
 
 
 		$poll->save();
