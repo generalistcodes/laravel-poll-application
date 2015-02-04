@@ -39,28 +39,22 @@
                         <div class="alert alert-info fade in">
                             Please Enter your Information Below
                         </div>
-                        <div class="form-group">
-                            <label class="col-md-2 control-label">Name:</label>
-                            <div class="col-md-10"><input type="text" name="name" class="form-control"></div>
-                        </div>
 
                         <div class="form-group">
-                            <label class="col-md-2 control-label">Email:</label>
-                            <div class="col-md-10"><input type="text" name="email" class="form-control"></div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="col-md-2 control-label">Birthdate:</label>
+                            <label class="col-md-2 control-label">Info:</label>
                             <div class="col-md-10">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <input type="text" name="regular" class="form-control"><span class="help-block">Month</span>
+                                        {{ Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Full Name']) }}
+                                        <span class="help-block">Name</span>
                                     </div>
                                     <div class="col-md-4">
-                                        <input type="text" name="regular" class="form-control"><span class="help-block align-center">Date</span>
+                                        {{ Form::text('email', null, ['class' => 'form-control', 'placeholder' => 'mail@example.com']) }}
+                                        <span class="help-block align-center">Email</span>
                                     </div>
                                     <div class="col-md-4">
-                                        <input type="text" name="regular" class="form-control"><span class="help-block align-right">Year</span>
+                                        {{ Form::text('birthday', null, ['class' => 'form-control', 'placeholder' => '01/01/1969']) }}
+                                        <span class="help-block align-right">Birthdate</span>
                                     </div>
                                 </div>
                             </div>
@@ -68,7 +62,9 @@
 
                         <div class="form-group">
                             <label class="col-md-2 control-label">Reasons:</label>
-                            <div class="col-md-10"><textarea rows="3" cols="5" name="textarea" class="auto form-control" style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 68px;"></textarea></div>
+                            <div class="col-md-10">
+                                {{ Form::textarea('reasons', null, ['size' => '3x5','class' => 'auto form-control','style' => 'overflow: hidden; word-wrap: break-word; resize: horizontal; height: 68px;']) }}
+                            </div>
                         </div>
 
 

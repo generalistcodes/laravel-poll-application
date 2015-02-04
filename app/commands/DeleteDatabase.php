@@ -39,6 +39,7 @@ class DeleteDatabase extends Command {
 	{
 		Schema::dropIfExists('answers');
 		Schema::dropIfExists('polls');
+		Schema::dropIfExists('users');
 	}
 
 

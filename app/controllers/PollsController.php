@@ -19,9 +19,16 @@ class PollsController extends BaseController
 	public function saveAnswer($id)
 	{	
 		$answer = Input::get('answer', null);
+        $data = Input::only('name', 'reasons', 'email', 'birthday');
 
-		$poll = Poll::find((int) $id);
+
+
+        $poll = Poll::find((int) $id);
+
+
+
 		$poll->answers()->where('id', (int) $answer)->increment('votes');
+		$poll->users()->create($data);
 
 		return Redirect::route('results', array( 'id' => $id, ));
 	}

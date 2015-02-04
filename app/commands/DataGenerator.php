@@ -20,7 +20,7 @@ class DataGenerator extends Command {
 	 *
 	 * @var string
 	 */
-	protected $description = 'Generate Random Data in DB.';
+	protected $description = 'Generate Data in DB.';
 
 	/**
 	 * Create a new command instance.
