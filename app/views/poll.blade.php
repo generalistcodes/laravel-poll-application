@@ -45,15 +45,15 @@
                             <div class="col-md-10">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        {{ Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Full Name']) }}
+                                        {{ Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Full Name', 'required']) }}
                                         <span class="help-block">Name</span>
                                     </div>
                                     <div class="col-md-4">
-                                        {{ Form::text('email', null, ['class' => 'form-control', 'placeholder' => 'mail@example.com']) }}
+                                        {{ Form::text('email', null, ['class' => 'form-control', 'placeholder' => 'mail@example.com', 'required']) }}
                                         <span class="help-block align-center">Email</span>
                                     </div>
                                     <div class="col-md-4">
-                                        {{ Form::text('birthday', null, ['class' => 'form-control', 'placeholder' => '01/01/1969']) }}
+                                        {{ Form::text('birthday', null, ['class' => 'form-control', 'placeholder' => '01/01/1969', 'required']) }}
                                         <span class="help-block align-right">Birthdate</span>
                                     </div>
                                 </div>
